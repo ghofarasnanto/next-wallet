@@ -1,0 +1,137 @@
+.containerProfile {
+    background-color: white;
+    /* width: 75%; */
+    /* height: 800px; */
+    border-radius: 20px;
+    padding: 40px;
+  }
+  
+  .containerProfile > p {
+    color: #7a7886;
+  }
+  
+  .cardDetails {
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.075);
+    width: 100%;
+    border-radius: 15px;
+    padding: 10px 20px;
+    line-height: 25px;
+  }
+  
+  .inputFile {
+    height: 60px;
+  }
+  
+  .inputFile > p {
+    color: #7a7886;
+    margin-top: 13px;
+    cursor: pointer;
+  }
+  
+  .contact {
+    color: #7a7886;
+  }
+  
+  .cardProfile {
+    background-color: #e5e8ed;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  
+  .cardProfile > div {
+    color: #4d4b57;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  
+  .contentForm {
+    padding: 0px 120px;
+  }
+  
+  .contentForm > div {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #a9a9a999;
+    margin-top: 50px;
+    padding: 10px 0;
+  }
+  
+  .contentFormPin {
+    border: none;
+    margin-top: 150px;
+    padding: 10px 0;
+    padding: 0px 120px;
+  }
+  
+  .contentInput > input {
+    border: none;
+    position: relative;
+    bottom: 8px;
+    left: 10px;
+    width: 90%;
+  }
+  
+  .contentInputPhone > input {
+    border: none;
+    position: relative;
+    bottom: 8px;
+    left: 10px;
+    width: 80%;
+  }
+  
+  .spanInput {
+    position: relative;
+    bottom: 7px;
+    left: 7px;
+  }
+  
+  .contentInputPhone > input:focus {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+  }
+  
+  .contentInput > input:focus {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+  }
+  
+  .contentButton {
+    background-color: #dadada;
+    color: #88888f;
+    padding: 20px 0;
+    border-radius: 20px;
+  }
+  .disableButton {
+    background-color: #dadada;
+    color: #88888f;
+    padding: 20px 0;
+    border-radius: 20px;
+    width: 100%;
+  }
+  
+  .activeButton {
+    background-color: #6379f4;
+    color: #fff;
+    padding: 20px 0;
+    border-radius: 20px;
+    width: 100%;
+  }
+  .eyeCrossed {
+    cursor: pointer;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .contentForm {
+      padding: 10px;
+    }
+    .spanInput {
+      position: relative;
+      bottom: 7px;
+      left: 15px px;
+    }
+  }

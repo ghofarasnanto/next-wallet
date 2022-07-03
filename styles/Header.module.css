@@ -1,0 +1,36 @@
+.container {
+  padding: 1rem 4rem;
+}
+.headerNav {
+  background: #6379f4;
+}
+.headerTitle {
+  width: 109px;
+  height: 40px;
+  left: 150px;
+  top: 63px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 29px;
+  line-height: 40px;
+  color: #ffffff;
+}
+.loginButton {
+  border: 2px solid #ffffff;
+  box-shadow: 0px 6px 75px rgba(100, 87, 87, 0.05);
+  border-radius: 12px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.loginButton:hover{
+  color:#000000;
+}
+.signButton {
+  background: #ffffff;
+  box-shadow: 0px 6px 75px rgba(100, 87, 87, 0.05);
+  cursor: pointer;
+  border-radius: 12px;
+}
+.signButton:hover{
+  background: rgb(240, 236, 236);
+}

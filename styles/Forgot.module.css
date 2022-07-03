@@ -1,0 +1,52 @@
+.contentForgot {
+    /* width: 50%; */
+    padding: 100px 120px 100px 50px;
+  }
+  
+  .contentDesc {
+    color: #3a3d4299;
+  }
+  
+  .contentForm > div {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #a9a9a999;
+    margin-top: 50px;
+    padding: 10px 0;
+  }
+  
+  .contentInput > input {
+    border: none;
+    position: relative;
+    bottom: 8px;
+    left: 10px;
+    width: 90%;
+  }
+  
+  .contentInput > input:focus {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+  }
+  
+  .disableButton {
+    background-color: #dadada;
+    color: #88888f;
+    padding: 20px 0;
+    border-radius: 20px;
+  }
+  
+  .activeButton {
+    background-color: #6379f4;
+    color: #fff;
+    padding: 20px 0;
+    border-radius: 20px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .contentForgot {
+      padding: 100px;
+    }
+  }
