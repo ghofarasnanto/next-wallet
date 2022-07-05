@@ -23,8 +23,9 @@ const ModalNav = ({ id, message, button, path }) => {
               <h2 className="text-center">{message}</h2>
             </div>
             <div className="modal-footer justify-content-center border border-0">
-              <button
+              <button               
                 className="btn btn-primary"
+                data-bs-dismiss="modal"
                 onClick={() => {
                   router.push(path);
                   dispatch(getProfileAction(Userid, token));
