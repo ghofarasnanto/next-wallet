@@ -40,33 +40,33 @@ const Hsitory = () => {
             onClick={() => {
               showDropdown(!dropdown);
             }}
-            className={`position-relative ${styles.filterButton}`}
+            className={`${styles.filButton}`}
           >
-            <p className="bg-light p-2 rounded rounded-5 ">
+            <p className={`bg-light p-2 rounded rounded-5`}>
               Select Filter
             </p>
             {dropdown ? (
-              <div className={styles.dropDownV2}>
+              <div className={`${styles.filterButton} ${styles.dropDownV2}`}>
                 <p
                   onClick={() => {
                     router.push("history?filter=WEEK&page=1");
                   }}
                 >
-                  WEEK
+                  Week
                 </p>
                 <p
                   onClick={() => {
                     router.push("history?filter=MONTH&page=1");
                   }}
                 >
-                  MONTH
+                  Month
                 </p>
                 <p
                   onClick={() => {
                     router.push("history?filter=YEAR&page=1");
                   }}
                 >
-                  YEAR
+                  Year
                 </p>
                 <p
                   onClick={() => {

@@ -14,7 +14,7 @@ const ModalInput = ({ id, title, desc, children, button, handle, status }) => {
         <div className="modal-dialog modal-dialog-centered">
           <div className={`${styles.modalConfirm} modal-content`}>
             <div className="modal-header border border-0">
-              <h5 className="modal-title" id="exampleModalLabel">
+              <h5 className="text-center" id="exampleModalLabel">
                 {title}
               </h5>
               <button
@@ -26,7 +26,7 @@ const ModalInput = ({ id, title, desc, children, button, handle, status }) => {
             </div>
             <div className="modal-body border border-0">
               <p>{desc}</p>
-              <div className={`${styles.pinCode}`}>{children}</div>
+              <div className={`${styles.InputPin}`}>{children}</div>
             </div>
             <div className="modal-footer  border border-0">
               {status ? (

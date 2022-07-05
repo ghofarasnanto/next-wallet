@@ -46,14 +46,14 @@ const Dashboard = () => {
             <p className="mt-4">{dataInfo ? dataInfo.data.noTelp : "No Number"}</p>
           </div>
           <div className="col-3 row gap-3">
-            <button className={`btn ${styles.btnSaldo}`}
+            <button className={`btn d-flex flex-wrap align-items-center justify-content-center ${styles.btnSaldo}`}
              onClick={() => {
               router.push("/transfer");
             }}
             >
               <Image src={Arrow} alt="transfer" />
               Transfer</button>
-            <button className={`btn ${styles.btnSaldo}`}
+            <button className={`btn d-flex flex-wrap align-items-center justify-content-center ${styles.btnSaldo}`}
              data-bs-toggle="modal"
              data-bs-target="#topUpModal"
              >
@@ -64,8 +64,8 @@ const Dashboard = () => {
         <div
           className={`d-flex justify-content-between gap-3 mt-4 ${styles.rowInfo}`}
         >
-          <div className={`col-5 ${styles.colDashboard}`}>
-            <div className="row justify-content-between">
+          <div className={`${styles.colDashboard}`}>
+            <div className="d-flex flex-wrap align-items-center justify-content-between">
               <div className={`col-md-4 col-4 ${styles.dashboardCard}`}>
                 <Image src={ArrowGreen} alt="arrow-gren" />
                 <p>Income</p>

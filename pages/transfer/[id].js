@@ -86,7 +86,7 @@ const TransferId = () => {
               type="text"
               // name="notes"
               className={`${styles.notesInput}`}
-              placeholder="Add some notes"
+              placeholder="Add a payment for"
               onChange={(e) => {
                 dispatch(setNotesAction(e.target.value));
               }}

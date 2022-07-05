@@ -71,10 +71,10 @@
 
 .inputTopup {
   text-align: center;
-  border: 1px solid #a9a9a999;
-  color: #6379f4;
+  border: 1px solid #00000099;
+  color: #2f3030;
   border-radius: 10px;
-  width: 75%;
+  width: 100vw;
   padding: 10px 10px 5px;
   font-size: 25px;
 }
@@ -116,7 +116,7 @@
   margin: 10px 0;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 425px) {
   .logout {
     margin-top: 0px;
   }

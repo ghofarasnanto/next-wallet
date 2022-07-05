@@ -128,7 +128,7 @@ function Login() {
             type="submit"
             className={`${
               email && password ? styles.activeButton : styles.disableButton
-            } btn mt-5`}
+            } mt-5`}
           >
             Login
           </button>

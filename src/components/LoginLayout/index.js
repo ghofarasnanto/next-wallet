@@ -37,7 +37,7 @@ const LoginLayout = ({ children, title, image }) => {
       .then((res) => {
         setIsSuccess(true);
       })
-      .catch((err) => {
+      .catch((err) => {        
         setIsSuccess(false);
       });
   };
@@ -49,8 +49,12 @@ const LoginLayout = ({ children, title, image }) => {
       <div className={styles.bgColor}>
         <header>
           <nav className={`${styles.navBar}`}>
-            <div className="d-flex container justify-content-between py-5">
-              <h3 className={styles.brandName}>FazzPay</h3>
+            <div className="d-flex container justify-content-between pt-4 pb-3">
+              <h3 
+              onClick={() => {
+                router.push("/");
+              }}
+              className={styles.brandName}>FazzPay</h3>
               <div className="d-flex align-items-center gap-4">
                 <div>
                   <Image                   
@@ -89,9 +93,9 @@ const LoginLayout = ({ children, title, image }) => {
           </nav>
         </header>
         <main className={`${styles.main}`}>
-          <div className="container d-flex flex-column flex-md-row gap-5 my-5">
+          <div className="container d-flex flex-column gap-4 my-3 flex-md-row">
             <div className={`col-md-3 col-12 text-center ${styles.navMain}`}>
-              <div className="d-flex flex-row flex-md-column justify-content-between ">
+              <div className="d-flex flex-wrap justify-content-between ">
                 <div
                   className={`d-flex justify-content-start ${styles.navMenu}`}
                 >
@@ -164,7 +168,7 @@ const LoginLayout = ({ children, title, image }) => {
           </div>
         </main>
         <footer className={`${styles.footer}`}>
-          <div className="d-flex container justify-content-between py-5 text-white">
+          <div className="d-flex container justify-content-between pb-2 pt-4 text-white">
             <p>2022 FazzPay. All right reserved.</p>
             <div className="d-flex gap-3">
               <p>2022 FazzPay. All right reserved.</p>

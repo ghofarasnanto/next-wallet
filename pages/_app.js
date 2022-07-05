@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Router from 'next/router';
 import NProgress from 'nprogress'; //nprogress module
 import 'nprogress/nprogress.css'; //styles of nprogress
+import { motion } from "framer-motion";
 
 //Binding events. 
 Router.events.on('routeChangeStart', () => NProgress.start());
@@ -24,17 +25,30 @@ function App({ Component, pageProps }) {
           <Head>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-            crossOrigin="anonymous"
-          />
+              href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+              crossOrigin="anonymous"
+            />
           </Head>
 
           <Script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
             crossOrigin="anonymous" />
-          <Component {...pageProps} />
+          <motion.div
+            initial="initial"
+            animate="animate"
+            variants={{
+              initial: {
+                opacity: 0,
+              },
+              animate: {
+                opacity: 1,
+              },
+            }}
+          >
+            <Component {...pageProps} />
+          </motion.div>
         </PersistGate>
       </ReduxProvider>
     </>

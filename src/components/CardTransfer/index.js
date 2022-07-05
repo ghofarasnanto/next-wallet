@@ -7,21 +7,21 @@ import { useRouter } from "next/router";
 const CardTransfer = ({ image, firstname, lastname, noTelp, id }) => {
   const router = useRouter();
   return (
-    <div 
-    onClick={() => {
-      router.push(`/transfer/${id}`);
-    }}
-    className={`d-flex mt-4 gap-4 ${styles.cardTransfer}`}>
+    <div
+      onClick={() => {
+        router.push(`/transfer/${id}`);
+      }}
+      className={`d-flex mt-4 gap-4 ${styles.cardTransfer}`}>
       <Image width='50px'
         height='50px'
         src={image ? `https://res.cloudinary.com/dd1uwz8eu/image/upload/v1653276449/${image}`
-        : "/img/usernologin.png"}        
-        />
+          : "/img/usernologin.png"}
+      />
       <div className={`${styles.titleTransfer}`}>
-        <p>
-        {firstname + " " + lastname}
+        <div>
+          {firstname + " " + lastname}
           <section>{noTelp}</section>
-        </p>
+        </div>
       </div>
     </div>
   );

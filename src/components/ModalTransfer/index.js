@@ -18,11 +18,11 @@ const ModalInput = ({
     <Modal show={show} onHide={hide} centered>
       <div className={`${styles.modalConfirm}`}>
         <Modal.Header closeButton className="border border-0">
-          {title}
+          <b>{title}</b>
         </Modal.Header>
         <Modal.Body className="border border-0">
           <p>{desc}</p>
-          <div className={`${styles.pinCode}`}>{children}</div>
+          <div className={`${styles.InputPin}`}>{children}</div>
         </Modal.Body>
         <Modal.Footer className="border border-0">
           {status ? (

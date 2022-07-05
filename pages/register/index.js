@@ -163,15 +163,7 @@ const Register = () => {
               }}
             />
           </div>
-          {/* {login ? (
-            <>
-              <p className="text-center text-success mt-4 fw-bold">
-                {`${successMsg}`}
-              </p>
-            </>
-          ) : (
-            <p className="text-center text-danger mt-4 fw-bold">{`${errMsg}`}</p>
-          )} */}
+         
           <button
             type={`${
               email && password && firstName && lastName ? "submit" : "button"
@@ -180,7 +172,7 @@ const Register = () => {
               email && password && firstName && lastName
                 ? styles.activeButton
                 : styles.disableButton
-            } btn mt-5`}
+            } mt-5`}
           >
             Sign Up
           </button>

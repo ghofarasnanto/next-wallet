@@ -50,7 +50,7 @@ export default function Home() {
             <br />
             free to use by all users around the world.
           </p>
-          <div className="row justify-content-center mt-5">
+          <div className="row justify-content-center bg-white mt-4">
             <div className="col-md-3 p-3">
               <Image src={Call} alt="callimage" />
               <p>24/7 Support</p>
@@ -67,7 +67,7 @@ export default function Home() {
                 want and we will respond it.
               </p>
             </div>
-            <div className="col-md-3  p-3">
+            <div className="col-md-3 bg-white p-3">
               <Image src={Download} alt="callimage" />
               <p>24/7 Support</p>
               <p>

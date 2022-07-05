@@ -13,7 +13,7 @@ const CardHistory = ({ image, firstName, lastName, type, amount }) => {
       : "";
   return (
     <div
-      className={`row justify-content-between align-items-center ${styles.clickAble}`}
+      className={`d-flex flex-wrap justify-content-between align-items-center ${styles.clickAble}`}
     >
       <div className="col-8">
         <div className="d-flex align-items-center justify-content-start gap-3">
