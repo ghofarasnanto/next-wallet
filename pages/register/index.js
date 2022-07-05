@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 //assets
 import styles from "../../styles/Register.module.css";
-import AuthSideLayout from "../../src/components/AuthLayout/Index";
+import AuthSideLayout from "../../src/components/AuthLayout/";
 import Lock from "../../src/assets/img/lockauth.png";
 import Email from "../../src/assets/img/mail.png";
 import Eye from "../../src/assets/img/eye-crossed.png";

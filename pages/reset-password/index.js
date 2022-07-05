@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-import AuthSideLayout from "../../src/components/AuthLayout/Index";
+import AuthSideLayout from "../../src/components/AuthLayout/";
 
 import styles from "../../styles/NewPass.module.css";
 import Lock from "../../src/assets/img/lockauth.png";

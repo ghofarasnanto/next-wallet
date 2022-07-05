@@ -2,7 +2,6 @@ import { useEffect,useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import styles from "../../styles/Dashboard.module.css";
 import ArrowGreen from "../../src/assets/img/arrow-green.svg";
 import ArrowRed from "../../src/assets/img/arrow-red.svg";
 import Arrow from "../../src/assets/img/arrow-up.svg";
@@ -11,6 +10,7 @@ import LoginLayout from "../../src/components/LoginLayout/index";
 import CardHistory from "../../src/components/CardHistory/index";
 import { getProfileAction } from "../../src/redux/actionCreator/auth";
 import { getHistoriesLimit } from "../../src/modules/history";
+import styles from "../../styles/DashBoard.module.css";
 
 const Dashboard = () => {
   const router = useRouter();

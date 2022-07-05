@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import AuthSideLayout from "../../src/components/AuthLayout/Index";
+import AuthSideLayout from "../../src/components/AuthLayout/";
 
 import styles from "../../styles/Forgot.module.css";
 import Email from "../../src/assets/img/mail.png";

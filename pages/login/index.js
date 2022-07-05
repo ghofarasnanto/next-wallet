@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer, toast } from 'react-toastify';
 
 //Layout
-import AuthSideLayout from "../../src/components/AuthLayout/Index";
+import AuthSideLayout from "../../src/components/AuthLayout/";
 
 //ReduxAction
 import { loginAction } from "../../src/redux/actionCreator/auth";

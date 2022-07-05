@@ -2,7 +2,7 @@ import Image from "next/image";
 import { PinInput } from "react-input-pin-code";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import AuthSideLayout from "../../src/components/AuthLayout/Index";
+import AuthSideLayout from "../../src/components/AuthLayout/";
 import styles from "../../styles/CreatePin.module.css";
 import Success from "../../src/assets/img/success.svg";
 
