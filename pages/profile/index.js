@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import LoggedinLayout from "../../src/components/LoggedInLayout/index";
+import LoginLayout from "../../src/components/LoginLayout/index";
 import Avaprofile from "../../src/assets/img/avanav.png";
 import Pencil from "../../src/assets/img/Vector.png";
 import styles from "../../styles/Profile.module.css";
@@ -14,7 +14,7 @@ const Profile = () => {
     { id: 3, title: "Change PIN", path: "changepin" },
   ];
   return (
-    <LoggedinLayout title="Profile">
+    <LoginLayout title="Profile">
       <div className={`col-12 col-md-9 ${styles.containerProfile}`}>
         <div className="d-flex justify-content-center">
           <div className="col-6 text-center">
@@ -48,7 +48,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
-    </LoggedinLayout>
+    </LoginLayout>
   );
 };
 

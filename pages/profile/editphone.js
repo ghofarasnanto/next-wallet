@@ -1,14 +1,13 @@
 import styles from "../../styles/Profile.module.css";
-import LoggedinLayout from "../../src/components/LoggedInLayout/index";
+import LoginLayout from "../../src/components/LoginLayout/index";
 import { useState } from "react";
 import Image from "next/image";
 import Call from "../../src/assets/img/phone.svg";
 
 const EditPhone = () => {
   const [phone, setPhone] = useState("");
-  console.log(phone);
   return (
-    <LoggedinLayout title="Change Password">
+    <LoginLayout title="Change Password">
       <div className={`col-12 col-md-9 ${styles.containerProfile}`}>
         <h3>Edit Phone Number</h3>
         <p className="mt-4">
@@ -42,7 +41,7 @@ const EditPhone = () => {
           </button>
         </form>
       </div>
-    </LoggedinLayout>
+    </LoginLayout>
   );
 };
 

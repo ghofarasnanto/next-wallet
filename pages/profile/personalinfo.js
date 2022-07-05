@@ -1,13 +1,12 @@
 import styles from "../../styles/Profile.module.css";
-import LoggedinLayout from "../../src/components/LoggedInLayout/index";
+import LoginLayout from "../../src/components/LoginLayout/index";
 
 import { useRouter } from "next/router";
 
 const PersonalInfo = () => {
   const router = useRouter();
-  console.log(router);
   return (
-    <LoggedinLayout title="Personal Info">
+    <LoginLayout title="Personal Info">
       <div className={`col-12 col-md-9 ${styles.containerProfile}`}>
         <h3>Personal Information</h3>
         <p className="mt-4">
@@ -40,10 +39,14 @@ const PersonalInfo = () => {
             Phone Number
             <section className="fw-bold mt-3">+62 8139 3677 7946</section>
           </p>
-          <p className="text-primary mt-3">Manage</p>
+          <p className="text-primary mt-3 cursor-pointer"
+          onClick={() => {
+            router.push("/profile/editphone");
+          }}
+          >Manage</p>
         </div>
       </div>
-    </LoggedinLayout>
+    </LoginLayout>
   );
 };
 

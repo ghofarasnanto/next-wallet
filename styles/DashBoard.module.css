@@ -1,0 +1,57 @@
+.saldoRow {
+    background-color: #6379f4;
+    border-radius: 20px;
+    padding: 40px;
+  }
+  
+  .btnSaldo {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.199);
+    border: 1px solid white;
+  }
+  
+  .btnSaldo:hover {
+    color: white;
+    font-weight: bold;
+  }
+  
+  .colDashboard {
+    padding: 15px 40px;
+    border-radius: 20px;
+    width: 55%;
+    /* height: 360px; */
+    height: 100%;
+    background-color: white;
+  }
+  
+  .colHistory {
+    padding: 15px 40px;
+    border-radius: 20px;
+    width: 45%;
+    /* height: 360px; */
+    height: auto;
+    background-color: white;
+  }
+  
+  .clickAble {
+    cursor: pointer;
+  }
+  
+  .imageAvatar {
+    width: 200px;
+    height: 200px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .dashboardCard > p {
+      font-size: 11px;
+    }
+    .clickAble {
+      font-size: 8px;
+    }
+    .colHistory {
+      padding: 15px 20px;
+      border-radius: 20px;
+      width: 40%;
+    }
+  }

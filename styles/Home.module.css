@@ -1,57 +1,141 @@
-.saldoRow {
-    background-color: #6379f4;
-    border-radius: 20px;
-    padding: 40px;
+.header {
+  background-size: cover;
+  background-image: url(../src/assets/img/header.png);
+  width: 100vw;
+  height: 85vh;
+  overflow-x: hidden;
+}
+
+.headerTitle {
+  margin-top: 100px;
+  font-size: 68px;
+}
+
+
+.tryButton {
+  color: #344ddf;
+}
+
+.tryButton:hover {
+  color: #6379f4;
+}
+
+.support {
+  padding: 100px 0;
+  overflow-x: hidden;
+  background-color: #fafcff;
+}
+
+.secondHeader {
+  margin-top: 100px;
+  font-size: 60px;
+}
+
+.thirdHeader {
+  font-size: 60px;
+}
+
+.sectionHeader {
+  color: #6379f4;
+  display: inline;
+}
+
+.thirdRow {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  column-gap: 50px;
+  background-color: #e5e5e5;
+}
+
+.fourthRow {
+  padding: 100px 0;
+  background-color: white;
+}
+
+.price {
+  position: relative;
+  left: 500px;
+  width: 25%;
+  border-radius: 50px;
+  padding: 20px 0;
+  background-color: #473ad10f;
+  color: #6379f4;
+}
+
+.fifthRow {
+  background-color: #473ad10f;
+}
+
+.fourthHeader {
+  margin-top: 100px;
+  text-align: start;
+  font-size: 60px;
+}
+
+.fifthHeader {
+  font-size: 60px;
+}
+
+.cardRound {
+  border-radius: 20px;
+}
+
+.sixthRow {
+  background-color: #fafcff;
+  padding: 100px 0;
+}
+
+.arrowLeft,
+.arrowRight {
+  background-color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+
+.cardAva {
+  width: 65%;
+  border-radius: 30px;
+}
+
+.seventhRow {
+  background-color: #6379f4;
+  padding: 80px 150px;
+}
+
+.lineFooter {
+  margin-top: 50px;
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+
+.copyRight {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 425px) {
+  .price {
+    position: relative;
+    left: 200px;
+    width: 25%;
   }
-  
-  .btnSaldo {
-    color: white;
-    background-color: rgba(255, 255, 255, 0.199);
-    border: 1px solid white;
+  .secondRow {
+    padding: 100px 50px;
   }
-  
-  .btnSaldo:hover {
-    color: white;
-    font-weight: bold;
+  .thirdRow {
+    padding: 50px 50px;
   }
-  
-  .colDashboard {
-    padding: 15px 40px;
-    border-radius: 20px;
-    width: 55%;
-    /* height: 360px; */
-    height: 100%;
-    background-color: white;
+  .fifthRow {
+    padding-bottom: 50px;
   }
-  
-  .colHistory {
-    padding: 15px 40px;
-    border-radius: 20px;
-    width: 45%;
-    /* height: 360px; */
-    height: auto;
-    background-color: white;
+  .tryBtn {
+    width: 150px;
+    border-radius: 10px;
   }
-  
-  .clickAble {
-    cursor: pointer;
-  }
-  
-  .imageAvatar {
-    width: 200px;
-    height: 200px;
-  }
-  
-  @media only screen and (max-width: 600px) {
-    .dashboardCard > p {
-      font-size: 11px;
-    }
-    .clickAble {
-      font-size: 8px;
-    }
-    .colHistory {
-      padding: 15px 20px;
-      border-radius: 20px;
-      width: 40%;
-    }
-  }
+}

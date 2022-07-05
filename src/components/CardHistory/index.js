@@ -1,25 +1,47 @@
 import Image from "next/image";
-import Avatar from "../../assets/img/logo.svg";
+import Ava from "../../assets/img/avanav.png";
 import styles from "../../../styles/CardHistory.module.css";
 
-const CardHistory = () => {
+const CardHistory = ({ image, firstName, lastName, type, amount }) => {
+  const typeName =
+    type === "send"
+      ? "Transfer"
+      : type === "topup"
+      ? "Topup"
+      : type === "accept"
+      ? "Accept"
+      : "";
   return (
     <div
       className={`row justify-content-between align-items-center ${styles.clickAble}`}
     >
       <div className="col-8">
         <div className="d-flex align-items-center justify-content-start gap-3">
-          <Image src={Avatar} alt="avatarHistory" />
+          <Image
+            width={60}
+            height={60}
+            src={
+              image ? `https://res.cloudinary.com/dd1uwz8eu/image/upload/v1653276449/${image}`
+              : "/img/usernologin.png"
+            }
+            alt="avatarHistory"
+          />
           <div className={`${styles.titleHistory}`}>
-            <div>
-              Samuel Suhi
-              <p>Accept</p>
+            <div className="fw-bold">
+              {firstName + " " + lastName}
+              <section className="fw-normal">{typeName}</section>
             </div>
           </div>
         </div>
       </div>
       <div className="col-4 text-end">
-        <p>+Rp50.000</p>
+        <p
+          className={
+            type === "topup" || type === "send"
+              ? styles.redColor
+              : styles.greenColor
+          }
+        >{`${type === "send" ? "-" : "+"}Rp.${amount}`}</p>
       </div>
     </div>
   );

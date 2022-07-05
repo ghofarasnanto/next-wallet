@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
 import { useRouter } from "next/router";
-import styles from "../styles/Landing.module.css";
+import styles from "../styles/Home.module.css";
 
 //Assets
 import Call from "../src/assets/img/phone.png";
@@ -23,11 +23,11 @@ export default function Home() {
   const router = useRouter();
   return (
     <>
-      <div className={`${styles.containerHome} text-center`}>
-        <div className={`${styles.banner}`}>
+      <div className={`text-center`}>
+        <div className={`${styles.header}`}>
           <Header />          
           <div className={`row text-center text-white justify-content-center`}>
-            <h1 className={styles.headerBanner}>
+            <h1 className={styles.headerTitle}>
               Awesome App <br />
               For Saving Time.
             </h1>
@@ -35,12 +35,12 @@ export default function Home() {
               We bring you a mobile app for banking problems that oftenly <br />
               wasting much of your times.
             </p>
-            <button className={`${styles.tryBtn} col-1 btn btn-light fw-bold`}>
+            <button className={`${styles.tryButton} col-1 btn btn-light fw-bold`}>
               Try it Free
             </button>
           </div>
         </div>
-        <div className={styles.secondRow}>
+        <div className={styles.support}>
           <h1 className={`${styles.secondHeader}`}>
             <section className={styles.sectionHeader}>Why</section> Choose
             FazzPay?

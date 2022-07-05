@@ -29,7 +29,6 @@ function Login() {
   const [login, setLogin] = useState(false);
 
   const pin = useSelector((state) => state.auth.dataLogin.pin);
-  // console.log(pin);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -39,20 +38,10 @@ function Login() {
     };
     dispatch(loginAction(body))
       .then((res) => {
-        toast.success(res.value.data.msg, {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
+        setSuccessMessage(res.value.data.msg);
         setLogin(true);
-        console.log(res);
       })
       .catch((err) => {
-        console.log(err);
         toast.error(err.response.data.msg, {
           position: "top-right",
           autoClose: 5000,
@@ -61,13 +50,25 @@ function Login() {
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-        });
+          });
+        setErrMessage(err.response.data.msg);
         setLogin(false);
       });
   };
   return (
     <AuthSideLayout title="Login">
-      <div className={`${styles.contentLogin} col-md-6`}>
+      <div className={`${styles.contentLogin} col-md-6`}>     
+      <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+              />
         <h2>
           Start Accessing Banking Needs With All Devices and All Platforms With
           30.000+ Users
@@ -120,16 +121,14 @@ function Login() {
             className={`${styles.forgotPass} text-end mt-3`}
           >
             Forgot password?
-          </p>
-          {login ? null : (
-            <p className="text-center text-danger mt-4 fw-bold">{`${errMsg}`}</p>
-          )}
+          </p>          
           <button
             data-bs-toggle="modal"
             data-bs-target="#loginModal"
-            type={`${email && password ? "submit" : "button"}`}
-            className={`${email && password ? styles.activeButton : styles.disableButton
-              } btn mt-5`}
+            type="submit"
+            className={`${
+              email && password ? styles.activeButton : styles.disableButton
+            } btn mt-5`}
           >
             Login
           </button>
@@ -145,13 +144,13 @@ function Login() {
             </span>
           </p>
         </form>
-      </div>
+      </div>    
       {login ? (
         <ModalNav
           id="loginModal"
           message={successMsg}
-          button={pin === null ? "Create PIN" : "Go to Dashboard"}
           path={pin === null ? "/pin" : "/dashboard"}
+          button={pin === null ? "Create PIN" : "Go to Dashboard"}          
         />
       ) : null}
     </AuthSideLayout>

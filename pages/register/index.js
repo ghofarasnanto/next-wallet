@@ -53,7 +53,6 @@ const Register = () => {
     };
     dispatch(registerAction(body))
       .then((res) => {
-        console.log(res.value);
         toast.success(res.value.data.msg, {
           position: "top-right",
           autoClose: 5000,
@@ -67,7 +66,6 @@ const Register = () => {
         setRegitered(true);
       })
       .catch((err) => {
-        console.log(err.response);
         toast.error(err.response.data.msg, {
           position: "top-right",
           autoClose: 5000,

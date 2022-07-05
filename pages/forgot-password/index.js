@@ -9,7 +9,7 @@ import { useState } from "react";
 const Forgot = () => {
   const [email, setEmail] = useState();
   return (
-    <AuthSideLayout title="Forgot Pass">
+    <AuthSideLayout title="Forgot-Password">
       <div className={`${styles.contentForgot} col-md-6 col-12`}>
         <h2>
           Did You Forgot Your Password? Don’t Worry, You Can Reset Your Password

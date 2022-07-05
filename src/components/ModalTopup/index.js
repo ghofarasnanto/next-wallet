@@ -1,8 +1,7 @@
-import styles from "../../../styles/ModalInput.module.css";
+import styles from "../../../styles/Modal.module.css";
 // import ModalStatus from "../ModalStatus";
 
 const ModalInput = ({ id, title, desc, children, button, handle, status }) => {
-  console.log(status);
   return (
     <>
       <div
@@ -34,8 +33,8 @@ const ModalInput = ({ id, title, desc, children, button, handle, status }) => {
                 <></>
               ) : (
                 <button
-                  data-bs-toggle="modal"
-                  data-bs-target="#statusModal"
+                  // data-bs-toggle="modal"
+                  // data-bs-target="#statusModal"
                   type="button"
                   onClick={handle}
                   className="btn btn-primary"

@@ -1,5 +1,5 @@
 import styles from "../../styles/Profile.module.css";
-import LoggedinLayout from "../../src/components/LoggedInLayout/index";
+import LoginLayout from "../../src/components/LoginLayout/index";
 import { PinInput } from "react-input-pin-code";
 import { useState } from "react";
 
@@ -9,18 +9,16 @@ const ChangePin = () => {
 
   const handleMatchPin = (e) => {
     e.preventDefault();
-    console.log("matching pin");
     setMatch(true);
   };
 
   const hanldeChangePin = (e) => {
     e.preventDefault();
-    console.log("New Pin");
     setMatch(false);
   };
 
   return (
-    <LoggedinLayout title="Change Password">
+    <LoginLayout title="Change Password">
       <div className={`col-12 col-md-9 ${styles.containerProfile}`}>
         <h3>Change PIN</h3>
         <p className="mt-4">
@@ -66,7 +64,7 @@ const ChangePin = () => {
           </button>
         </form>
       </div>
-    </LoggedinLayout>
+    </LoginLayout>
   );
 };
 

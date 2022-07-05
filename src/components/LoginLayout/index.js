@@ -9,19 +9,20 @@ import Grid from "../../assets/img/griddisable.svg";
 import Plus from "../../assets/img/plus.svg";
 import Logout from "../../assets/img/log-out.svg";
 import User from "../../assets/img/user.svg";
-import ModalInput from "../ModalInput";
+import ModalTopUp from "../ModalTopUp";
 import { useState } from "react";
 import CardNotif from "../CardNotif";
 import { useRouter } from "next/router";
 import { topUpAction } from "../../redux/actionCreator/auth";
 import { useSelector, useDispatch } from "react-redux";
 
-const LoggedinLayout = ({ children, title }) => {
+const LoginLayout = ({ children, title, image }) => {
   const router = useRouter();
   const [dropdown, showDropdown] = useState(false);
   const [topUp, setTopUp] = useState(0);
   const [isSuccess, setIsSuccess] = useState(false);
   const token = useSelector((state) => state.auth.dataLogin.token);
+  const dataInfo = useSelector((state) => state.auth.dataInfo);
   const redirectUrl = useSelector(
     (state) => state.auth.dataTopUp.data.redirectUrl
   );
@@ -34,11 +35,9 @@ const LoggedinLayout = ({ children, title }) => {
     };
     dispatch(topUpAction(body, token))
       .then((res) => {
-        console.log(res);
         setIsSuccess(true);
       })
       .catch((err) => {
-        console.log(err);
         setIsSuccess(false);
       });
   };
@@ -54,8 +53,11 @@ const LoggedinLayout = ({ children, title }) => {
               <h3 className={styles.brandName}>FazzPay</h3>
               <div className="d-flex align-items-center gap-4">
                 <div>
-                  <Image
-                    src={Ava}
+                  <Image                   
+                    src={image
+                      ? `https://res.cloudinary.com/dd1uwz8eu/image/upload/v1653276449/${image}`
+                      : "/img/usernologin.png"
+                    }
                     alt="ava"
                     width={`50px`}
                     height={`50px`}
@@ -63,8 +65,8 @@ const LoggedinLayout = ({ children, title }) => {
                   />
                 </div>
                 <div className={`${styles.infoNav}`}>
-                  <p className="fw-bold">Robert Chandler</p>
-                  <p>+62 8139 3677 7946</p>
+                  <p className="fw-bold">{dataInfo.data.firstName + " " + dataInfo.data.lastName}</p>
+                  <p>{dataInfo.data.noTelp}</p>
                 </div>
                 <div className="position-relative">
                   <Image
@@ -78,10 +80,7 @@ const LoggedinLayout = ({ children, title }) => {
                   {dropdown ? (
                     <div className={`${styles.dropdown}`}>
                       <CardNotif />
-                      <CardNotif />
-                      <CardNotif />
-                      <CardNotif />
-                      <CardNotif />
+                     
                     </div>
                   ) : null}
                 </div>
@@ -112,6 +111,9 @@ const LoggedinLayout = ({ children, title }) => {
                 >
                   <Image src={Arrow} alt="transfer" />
                   <button
+                  onClick={() => {
+                    router.push("/transfer");
+                  }}
                     className={`${false ? styles.activeNav : styles.disableNav
                       }`}
                   >
@@ -171,7 +173,7 @@ const LoggedinLayout = ({ children, title }) => {
           </div>
         </footer>
       </div>
-      <ModalInput
+      <ModalTopUp
         id="topUpModal"
         title="Topup"
         desc="Enter the amount of money, and click submit"
@@ -207,9 +209,9 @@ const LoggedinLayout = ({ children, title }) => {
               </a>
             </div>    
         )}
-      </ModalInput>
+      </ModalTopUp>
     </>
   );
 };
 
-export default LoggedinLayout;
+export default LoginLayout;
