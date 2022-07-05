@@ -9,7 +9,7 @@ import Grid from "../../assets/img/griddisable.svg";
 import Plus from "../../assets/img/plus.svg";
 import Logout from "../../assets/img/log-out.svg";
 import User from "../../assets/img/user.svg";
-import ModalTopUp from "../ModalTopUp";
+import ModalTopUp from "../ModalTopup";
 import { useState } from "react";
 import CardNotif from "../CardNotif";
 import { useRouter } from "next/router";
