@@ -24,7 +24,7 @@ const LoginLayout = ({ children, title, image }) => {
   const token = useSelector((state) => state.auth.dataLogin.token);
   const dataInfo = useSelector((state) => state.auth.dataInfo);
   const redirectUrl = useSelector(
-    (state) => state.auth.dataTopUp.data.redirectUrl
+    (state) => state.auth.dataTopUp
   );
   const dispatch = useDispatch();
 
@@ -201,7 +201,7 @@ const LoginLayout = ({ children, title, image }) => {
             >
               <a
                 className="text-white text-decoration-none"
-                href={redirectUrl}
+                href={redirectUrl.data.redirectUrl}
                 target="_blank"
                 rel="noreferrer"
               >
